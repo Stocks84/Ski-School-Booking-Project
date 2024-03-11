@@ -91,6 +91,12 @@ DATABASES = {
 }
 
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-stocks84-skischoolbooki-wun0w26ih4m.ws-eu108.gitpod.io",
+    "https://ski-school-f844a7c1b131.herokuapp.com"
+]
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
