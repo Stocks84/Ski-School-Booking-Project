@@ -17,3 +17,9 @@ class Profile(models.Model):
     ability = models.CharField(max_length=50)
     about_me = models.TextField()
     created_on = models. DateTimeField(auto_now_add=True)
+
+    class Joined_on:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"{self.first_name} | {self.nationality}"

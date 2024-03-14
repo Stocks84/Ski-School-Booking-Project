@@ -15,3 +15,9 @@ class Appointment(models.Model):
     meeting_point = models.CharField(max_length=200)
     special_requirements = models.CharField(max_length=200)
     created_on = models.DateTimeField(auto_now_add=True)
+
+    class Booked_on:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"{self.first_name} {self.surname}"
