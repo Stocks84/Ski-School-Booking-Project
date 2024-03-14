@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['8000-stocks84-skischoolbooki-wun0w26ih4m.ws-eu108.gitpod.io',
+ALLOWED_HOSTS = ['8000-stocks84-skischoolbooki-wun0w26ih4m.ws-eu110.gitpod.io',
 '.herokuapp.com']
 
 
@@ -92,7 +92,7 @@ DATABASES = {
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-stocks84-skischoolbooki-wun0w26ih4m.ws-eu108.gitpod.io",
+    "https://8000-stocks84-skischoolbooki-wun0w26ih4m.ws-eu110.gitpod.io",
     "https://ski-school-f844a7c1b131.herokuapp.com"
 ]
 
