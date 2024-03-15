@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+
 class Appointment(models.Model):
     member = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="members"
