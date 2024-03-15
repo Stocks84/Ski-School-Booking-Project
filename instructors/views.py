@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Profile
 # Create your views here.
 
-
-def instructor_me(request):
-    return HttpResponse("This is the instructor page")
+class ProfileList(generic.ListView):
+    queryset = Profile.objects.all()
+    template_name = "instructors_profiles.html"
