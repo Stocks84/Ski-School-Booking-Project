@@ -13,7 +13,7 @@ class Profile(models.Model):
     surname = models.CharField(max_length=50)
     age = models.IntegerField()
     nationality = models.CharField(max_length=50)
-    laguages_spoken = models.TextField()
+    languages_spoken = models.TextField()
     ability = models.CharField(max_length=50)
     about_me = models.TextField()
     created_on = models. DateTimeField(auto_now_add=True)
