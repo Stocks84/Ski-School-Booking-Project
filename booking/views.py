@@ -4,7 +4,8 @@ from .models import Appointment
 # Create your views here.
 
 class AppointmentList(generic.ListView):
-    model = Appointment
+    queryset = Appointment.objects.all().order_by("-created_on")
+    template_name = "appointment_list.html"
 
 
 
