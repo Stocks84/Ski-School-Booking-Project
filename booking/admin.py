@@ -8,7 +8,7 @@ class AppointmentAdmin(SummernoteModelAdmin):
 
     list_display = ('surname', 'meeting_point')
     search_fields = ['surname']
-    list_filter = ('meeting_point',)
+    list_filter = ('meeting_point', 'created_on')
     summernote_fields = ('special_reuirements',)
 # Register your models here.
 

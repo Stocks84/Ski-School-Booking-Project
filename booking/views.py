@@ -5,7 +5,8 @@ from .models import Appointment
 
 class AppointmentList(generic.ListView):
     queryset = Appointment.objects.all().order_by("-created_on")
-    template_name = "appointment_list.html"
+    template_name = "booking/index.html"
+    paginate_by = 6
 
 
 
