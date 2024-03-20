@@ -15,15 +15,18 @@
                         <div class="card-body">
                             <div class="image-container">
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
+                                    <p class="client">Client name: {{ appointment.first_name }} {{ appointment.surname }}</p>
                                 </div>
                             </div>
                             <a href="#" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
+                                <h2 class="card-date">{{ appointment.date_and_time }}</h2>
                             </a>
 
                             <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}}
+                            <p class="card-text text-muted h6">{{ appointment.meeting_point }}
+                            </p>
+                            <hr />
+                            <p class="card-text text-muted h6">{{ appointment.created_on }}
                             </p>
                         </div>
                     </div>
