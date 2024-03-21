@@ -2,5 +2,5 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-    path('', views.ProfileList.as_view(), name="instructors"),
+    path('', views.Profile, name="instructors-urls"),
 ]

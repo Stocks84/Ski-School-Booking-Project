@@ -15,7 +15,7 @@
                         <div class="card-body">
                             <div class="image-container">
                                 <div class="image-flash">
-                                    <p class="client">Client name: {{ appointment.first_name }} {{ appointment.surname }}</p>
+                                    <p class="client">Client name: {{ appointment.first_name }} {{ appointment.surname }} {{ appointment.email_address}}</p>
                                 </div>
                             </div>
                             <a href="{% url 'appointment-detail' %}" class="appointment-link">

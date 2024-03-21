@@ -12,23 +12,23 @@ class AppointmentList(generic.ListView):
     template_name = "booking/booking.html"
     paginate_by = 4
 
-class appoinment_detail(generic.ListView):
+class appointment_detail(generic.ListView):
     queryset = Appointment.objects.all()
     template_name = "booking/appointment_detail.html"
-    
-    def appointment_detail(request):
-        """
-        Display an individual booking
-        """
+# def appointment_detail(request, email_address):
+#     """
+#     Display an individual profile
 
-        queryset = Appointment.objects.all(surname)
-        appointment = get_object_or_404(queryset)
+#     """
 
-        return render(
-            request,
-            "booking/appoinment_detail.html",
-            {"appointment": appointment},
-        )
+#     queryset = Appointment.objects.filter(status=1)
+#     post = get_object_or_404(queryset, email_address=email_address)
+
+#     return render(
+#         request,
+#         "booking/appointment_detail.html",
+#         {"appoinment": appointment},
+#     )
 
 
 

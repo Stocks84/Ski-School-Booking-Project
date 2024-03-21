@@ -3,5 +3,14 @@ from django.views import generic
 from .models import Profile
 # Create your views here.
 
-class ProfileList(generic.ListView):
-    model = Profile
+def about_me(request):
+    """
+    Renders the About page
+    """
+    about = Profile.objects.all().order_by('-updated_on').first()
+
+    return render(
+        request,
+        "profile/profile.html",
+        {"profile": profile},
+    )
