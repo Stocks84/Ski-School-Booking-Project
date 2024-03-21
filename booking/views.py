@@ -10,7 +10,7 @@ class Home(generic.ListView):
 class AppointmentList(generic.ListView):
     queryset = Appointment.objects.all().order_by("-created_on")
     template_name = "booking/booking.html"
-    paginate_by = 6
+    paginate_by = 4
 
 
 

@@ -91,12 +91,12 @@ body {
     z-index: 100;
 }
 
-.post-link {
+.appointment-link {
     text-decoration: none;
     color: #445261;
 }
 
-.post-link:hover,
+.appointment-link:hover,
 .page-link {
     color: #E84610;
 }
