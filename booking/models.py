@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+STATUS = ((0, "Pending"), (1, "Confirmed"))
 # Create your models here.
 
 
@@ -16,6 +17,7 @@ class Appointment(models.Model):
     meeting_point = models.CharField(max_length=200)
     special_requirements = models.CharField(max_length=200)
     created_on = models.DateTimeField(auto_now_add=True)
+    status = models.IntegerField(choices=STATUS, default=0)
 
     class Booked_on:
         ordering = ["-created_on"]

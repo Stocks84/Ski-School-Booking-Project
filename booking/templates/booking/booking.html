@@ -18,7 +18,7 @@
                                     <p class="client">Client name: {{ appointment.first_name }} {{ appointment.surname }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="appointment-link">
+                            <a href="{% url 'appointment-detail' %}" class="appointment-link">
                                 <h2 class="card-date">{{ appointment.date_and_time }}</h2>
                             </a>
 
