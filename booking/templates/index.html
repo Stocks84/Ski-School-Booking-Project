@@ -1,11 +1,26 @@
 {% extends "base.html" %}
+{% load static %}
 {% url 'home' as booking-urls %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <h2>Booking Form</h2>
 <form method="post">
+    {{ AppointmentForm | crispy }}
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Submit</button>
 </form>
+
+<!-- JavaScript code directly in HTML -->
+<script>
+    var bookingSuccess = "{{ booking_success }}";
+</script>
+<script src="{% static 'js/script.js' %}"></script>
+
 {% endblock %}
+
+
+
+
+
