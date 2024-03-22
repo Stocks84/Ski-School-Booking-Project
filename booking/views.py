@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.views import generic
 from .models import Appointment
+from .forms import AppointmentForm
 # Create your views here.
 
 
@@ -40,6 +41,17 @@ def signup_view(request):
     else:
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
+
+def index(request):
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # Redirect to a success page or any other page
+            return redirect('index.html')  # Change 'success' to your success URL
+    else:
+        form = AppointmentForm()
+    return render(request, 'index.html', {'form': form})
 
 
 # class Home(generic.ListView):

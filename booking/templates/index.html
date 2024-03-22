@@ -2,8 +2,10 @@
 {% url 'home' as booking-urls %}
 
 {% block content %}
-<h1>I AM THE HOME PAGE</h1>
-{% endblock %}
-{% block copyright %}
-    Copyright 2024 William Stocks
+<h2>Booking Form</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
 {% endblock %}
