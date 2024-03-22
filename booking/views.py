@@ -28,6 +28,19 @@ def login_view(request):
             pass
     return render(request, 'login.html')
 
+def signup_view(request):
+    """
+    Members sign up
+    """
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')  # Redirect to login page after signup
+    else:
+        form = UserCreationForm()
+    return render(request, 'signup.html', {'form': form})
+
 
 # class Home(generic.ListView):
 #     queryset = Appointment()
